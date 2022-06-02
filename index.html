@@ -108,19 +108,62 @@
                   >Understanding Javascript Promises (NodeJS.dev)</a
                 >
               </li>
-              <pre><code data-trim data-noescape>
-            const done = true; 
-            const isItDoneYet = new Promise((resolve, reject) => { 
-              if (done) { 
-                const workDone = 'Here is the thing I built'; 
-                resolve(workDone); 
-              } 
-              else { 
-                const why = 'Still working on something else'; 
-                reject(why); 
-              } 
-            });
-          </code></pre>
+              <li>Creating a Promise:</li>
+            </ul>
+            <pre>
+              <code data-trim data-noescape>
+                const done = true; 
+                const isItDoneYet = new Promise((resolve, reject) => { 
+                  if (done) { 
+                    const workDone = 'Here is the thing I built'; 
+                    resolve(workDone); 
+                  } 
+                  else { 
+                    const why = 'Still working on something else'; 
+                    reject(why); 
+                  } 
+                });
+              </code>
+            </pre>
+          </section>
+
+          <section data-background="backgrounds/Sprinkle.svg">
+            <h3>Promises (illustration)</h3>
+            <ul>
+              <li>
+                then specifies what happens when the promise is fulfilled
+                (success).
+              </li>
+              <li>
+                catch specifies what happens when a promise is rejected. (error)
+              </li>
+              <li>
+                from
+                <a
+                  href="https://nodejs.dev/learn/understanding-javascript-promises"
+                  >Understanding Javascript Promises (NodeJS.dev)</a
+                >
+              </li>
+            </ul>
+            <pre>
+              <code data-trim data-noescape>
+                const checkIfItsDone = () => {
+                  isItDoneYet
+                    .then(ok => {
+                      console.log(ok);
+                    })
+                    .catch(err => {
+                      console.error(err);
+                    });
+                };
+              </code>
+            </pre>
+          </section>
+          <section>
+            <h3>Illustration of Promise API in fetch</h3>
+            <ul>
+              <li></li>
+              <li></li>
             </ul>
           </section>
         </section>
