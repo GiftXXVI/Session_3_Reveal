@@ -84,9 +84,43 @@
         </section>
         <section>
           <section data-background="backgrounds/Sprinkle.svg">
+            <h3>Promise (Introduction)</h3>
+            <ul>
+              <li>
+                A promise is a substitute or representative for a value that is
+                not yet known.
+              </li>
+              <li>
+                It is a useful concept in asynchronous requests because it
+                allows the developer to associate handlers to an object whose
+                value has not yet been determined.
+              </li>
+            </ul>
+          </section>
+          <section data-background="backgrounds/Sprinkle.svg">
+            <h3>States of a Promise</h3>
+            <ul>
+              <li>
+                A Promise is in one of 3 states:
+                <ul>
+                  <li>pending: initial state.</li>
+                  <li>
+                    fulfilled: meaning that the operation was completed
+                    successfully.
+                  </li>
+                  <li>rejected: meaning that the operation failed.</li>
+                </ul>
+              </li>
+              <li>
+                A pending promise can be fullfilled with a value from the server
+                or rejected with an error message.
+              </li>
+            </ul>
+          </section>
+          <section data-background="backgrounds/Sprinkle.svg">
             <h3>fetch (and the Promise API)</h3>
             <ul>
-              <li>based on the Promise API.</li>
+              <li>fetch is based on the Promise API.</li>
               <li>a Promise includes:</li>
               <ul>
                 <li>
@@ -141,7 +175,7 @@
                 from
                 <a
                   href="https://nodejs.dev/learn/understanding-javascript-promises"
-                  >Understanding Javascript Promises (NodeJS.dev)</a
+                  >NodeJS.dev</a
                 >
               </li>
             </ul>
@@ -159,11 +193,29 @@
               </code>
             </pre>
           </section>
-          <section>
-            <h3>Illustration of Promise API in fetch</h3>
+          <section data-background="backgrounds/Sprinkle.svg">
+            <h3>Promise API in fetch</h3>
             <ul>
-              <li></li>
-              <li></li>
+              <li>
+                A fetch promise only rejects when a network error is
+                encountered.
+                <ul>
+                  <li>For example; if the server is unreachable.</li>
+                </ul>
+              </li>
+              <li>
+                from
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/API/fetch"
+                >
+                  MDN:
+                </a>
+                <blockquote>
+                  A fetch() promise does not reject on HTTP errors (404, etc.).
+                  Instead, a then() handler must check the Response.ok and/or
+                  Response.status properties.
+                </blockquote>
+              </li>
             </ul>
           </section>
         </section>
