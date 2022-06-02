@@ -14,39 +14,115 @@
     <link rel="stylesheet" href="dist/theme/night.css" />
 
     <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="plugin/highlight/github-dark-dimmed.css" />
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
-        <section data-markdown data-separator="^\n\n\n" data-separator-vertical="^\n\n">
-			## FULL STACK WEB DEVELOPER NANODEGREE
-			### SESSION #4
+        <section data-background="backgrounds/Sprinkle.svg">
+          <h2>FULL STACK WEB DEVELOPER NANODEGREE</h2>
+          <h3>SESSION #4</h3>
+        </section>
+        <section>
+          <section data-background="backgrounds/Sprinkle.svg">
+            <h3>AJAX</h3>
+            <ul>
+              <li>an acronym for Asynchronous JavaScript and XML.</li>
+              <li>
+                is a collection of technologies that are used to make
+                asynchronous connections to servers.
+              </li>
+            </ul>
+          </section>
+          <section data-background="backgrounds/Sprinkle.svg">
+            <h3>AJAX(continued)</h3>
+            <ul>
+              <li>
+                although XML is part of the acronym, nowadays JSON is preferred
+                because it is part of JavaScript, simpler and lighter in size
+                thanks to less formatting and structure data.
+              </li>
+              <li>
+                the fact that it is asynchronous means that it is possible to
+                communicate with a server, submit data and update part of a
+                webpage without having to reload the entire webpage.
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section data-background="backgrounds/Sprinkle.svg">
+          <h3>Why we need AJAX</h3>
+          <ul>
+            <li>
+              AJAX makes an application more interactive and enables it to load
+              updates without refreshing.
+            </li>
+            <li>
+              Such features improve the user experience in everyday
+              applications:
+            </li>
+            <li>
+              Google Workspace and Microsoft Office 365 apps automatically save
+              changes to a file every time the user makes a change.
+            </li>
+            <li>
+              WhatsApp immediately notifies a user when a new message or post
+              arrives in their inbox.
+            </li>
+          </ul>
+        </section>
 
+        <section data-background="backgrounds/Sprinkle.svg">
+          <h3>Javascript Methods for AJAX</h3>
+          <ul>
+            <li>
+              XMLHttpRequest Object: an older way to add AJAX functionality.
+            </li>
+            <li>fetch: modern, simpler method based on the Promise API.</li>
+            <li>we will focus on fetch.</li>
+          </ul>
+        </section>
+        <section>
+          <section data-background="backgrounds/Sprinkle.svg">
+            <h3>fetch (and the Promise API)</h3>
+            <ul>
+              <li>based on the Promise API.</li>
+              <li>a Promise includes:</li>
+              <ul>
+                <li>
+                  code that can take an indeterminate amount of time to return a
+                  result.
+                </li>
+                <li>code that waits for a result.</li>
+              </ul>
+            </ul>
+          </section>
 
-
-			## AJAX
-			- an acronym for Asynchronous JavaScript and XML.
-			- is a collection of technologies that are used to make asynchronous connections to servers.
-			
-
-			## AJAX(continued)
-			- although XML is part of the acronym, nowadays JSON is preferred because it is part of JavaScript, simpler and lighter in size thanks to less formatting and structure data.
-			- the fact that it is asynchronous means that it is possible to communicate with a server, submit data and update part of a webpage without having to reload the entire webpage.
-
-
-
-			## Why we need AJAX
-			- AJAX makes an application more interactive and enables it to load updates without refreshing.
-			- Such features improve the user experience in everyday applications:
-				- Google Workspace and Microsoft Office 365 apps automatically save changes to a file every time the user makes a change.
-				- WhatsApp immediately notifies a user when a new message or post arrives in their inbox.
-
-			
-			## 
-
-
-
+          <section data-background="backgrounds/Sprinkle.svg">
+            <h3>Promises (illustration)</h3>
+            <ul>
+              <li>
+                from
+                <a
+                  href="https://nodejs.dev/learn/understanding-javascript-promises"
+                  >Understanding Javascript Promises (NodeJS.dev)</a
+                >
+              </li>
+              <pre><code data-trim data-noescape>
+            const done = true; 
+            const isItDoneYet = new Promise((resolve, reject) => { 
+              if (done) { 
+                const workDone = 'Here is the thing I built'; 
+                resolve(workDone); 
+              } 
+              else { 
+                const why = 'Still working on something else'; 
+                reject(why); 
+              } 
+            });
+          </code></pre>
+            </ul>
+          </section>
         </section>
       </div>
     </div>
@@ -63,7 +139,7 @@
         hash: true,
 
         // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
       });
     </script>
   </body>
