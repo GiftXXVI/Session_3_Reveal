@@ -25,6 +25,75 @@
         </section>
         <section>
           <section data-background="backgrounds/Sprinkle.svg">
+            <h3>CRUD</h3>
+            <ul>
+              <li>an acronym for Create, Read, Update, Delete.</li>
+              <li>
+                these 4 operations are the basic operations of persistent
+                (non-volatile) storage .
+              </li>
+              <li>
+                they should also be used as a guideline when building a
+                <a href="https://aws.amazon.com/what-is/restful-api/"
+                  >REST/RESTful API</a
+                >
+                and when bulding a user interface for your applications.
+              </li>
+            </ul>
+          </section>
+          <section data-background="backgrounds/Sprinkle.svg">
+            <h3>CRUD in Databases</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Operation</th>
+                  <th>SQL</th>
+                  <th>SQLAlchemy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Create</td>
+                  <td>INSERT INTO interests(name) VALUES('Chess');</td>
+                  <td>interest = Interest(name='Chess')</td>
+                </tr>
+                <tr>
+                  <td>Read</td>
+                  <td>SELECT id,name FROM interests WHERE id=1;</td>
+                  <td>
+                    interest = Interests.query.filter(id==1).one_or_none()
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section  data-background="backgrounds/Sprinkle.svg">
+            <h3>CRUD in Databases (Continued)</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Operation</th>
+                  <th>SQL</th>
+                  <th>SQLAlchemy</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Update</td>
+                  <td>UPDATE interests SET name='Checkers' WHERE id=1;</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Delete</td>
+                  <td>DELETE FROM interests WHERE id=1;</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
+        <section>
+          <section data-background="backgrounds/Sprinkle.svg">
             <h3>AJAX</h3>
             <ul>
               <li>an acronym for Asynchronous JavaScript and XML.</li>
