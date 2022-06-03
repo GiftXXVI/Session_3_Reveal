@@ -54,20 +54,50 @@
               <tbody>
                 <tr>
                   <td>Create</td>
-                  <td>INSERT INTO interests(name) VALUES('Chess');</td>
-                  <td>interest = Interest(name='Chess')</td>
+                  <td>
+                    <pre>
+                      <code data-trim data-noescape>
+                      INSERT 
+                      INTO interests(name) 
+                      VALUES('Chess');
+                      </code>
+                    </pre>
+                  </td>
+                  <td>
+                    <pre>
+                      <code data-trim data-noescape>
+                      interest = \
+                      Interest(name='Chess')
+                      </code>
+                    </pre>
+                  </td>
                 </tr>
                 <tr>
                   <td>Read</td>
-                  <td>SELECT id,name FROM interests WHERE id=1;</td>
                   <td>
-                    interest = Interests.query.filter(id==1).one_or_none()
+                    <pre>
+                      <code data-trim data-noescape>
+                      SELECT 
+                      id,name 
+                      FROM interests 
+                      WHERE id=1;
+                      </code>
+                    </pre>
+                  </td>
+                  <td>
+                    <pre>
+                      <code data-trim data-noescape>
+                      interest = \
+                      Interests.query \
+                      .filter(id=1).one_or_none()
+                      </code>
+                    </pre>
                   </td>
                 </tr>
               </tbody>
             </table>
           </section>
-          <section  data-background="backgrounds/Sprinkle.svg">
+          <section data-background="backgrounds/Sprinkle.svg">
             <h3>CRUD in Databases (Continued)</h3>
             <table>
               <thead>
@@ -80,17 +110,56 @@
               <tbody>
                 <tr>
                   <td>Update</td>
-                  <td>UPDATE interests SET name='Checkers' WHERE id=1;</td>
-                  <td></td>
+                  <td>
+                    <pre>
+                      <code data-trim data-noescape>
+                      UPDATE 
+                      interests 
+                      SET name='Go' 
+                      WHERE id=1;
+                      </code>
+                    </pre>
+                  </td>
+                  <td>
+                    <pre>
+                      <code data-trim data-noescape>
+                      interest.name = 'Go'
+                      db.session.commit()
+                      </code>
+                    </pre>
+                  </td>
                 </tr>
                 <tr>
                   <td>Delete</td>
-                  <td>DELETE FROM interests WHERE id=1;</td>
-                  <td></td>
+                  <td>
+                    <pre>
+                      <code data-trim data-noescape>
+                      DELETE 
+                      FROM interests 
+                      WHERE id=1;
+                      </code>
+                    </pre>
+                  </td>
+                  <td>
+                    <pre>
+                      <code data-trim data-noescape>
+                      db.session \
+                      .delete(interest)
+
+                      db.session.commit()
+                      </code>
+                    </pre>
+                  </td>
                 </tr>
               </tbody>
             </table>
           </section>
+        </section>
+        <section>
+          <h3>MVC</h3>
+          <ul>
+            <li></li>
+          </ul>
         </section>
         <section>
           <section data-background="backgrounds/Sprinkle.svg">
