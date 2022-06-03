@@ -246,21 +246,62 @@
             </ul>
           </section>
         </section>
-        <section data-background="backgrounds/Sprinkle.svg">
-          <h3>Asynchronous Programming</h3>
-          <ul>
-            <li>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing"
-              >
-                asynchronous programming</a
-              >
-              is a technique enables a program to start a potentially long
-              running task and continue to be responsive while waiting for the
-              task to complete.
-            </li>
-            <li></li>
-          </ul>
+        <section>
+          <section data-background="backgrounds/Sprinkle.svg">
+            <h3>Asynchronous Programming</h3>
+            <ul>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing"
+                >
+                  asynchronous programming</a
+                >
+                is a technique enables a program to start a potentially long
+                running task and continue to be responsive while waiting for the
+                task to complete.
+              </li>
+              <li>
+                one example of an asynchronous function is fetch; which is used
+                to make HTTP requests.
+              </li>
+            </ul>
+          </section>
+          <section data-background="backgrounds/Sprinkle.svg">
+            <h3>Asynchronous vs Synchronous Programming</h3>
+            <ul>
+              <li>
+                an example of synchronous code is
+                <pre><code>const name = 'Gift';</code></pre>
+                the value is immediately assigned to the variable and the entire
+                program does not have to wait a long time to get the value into
+                the variable.
+              </li>
+              <li>
+                if a synchronous function runs for a very long time, it blocks
+                other functions that have to wait for it to complete.
+              </li>
+            </ul>
+          </section>
+          <section data-background="backgrounds/Sprinkle.svg">
+            <h3>Asynchronous Code Example</h3>
+            <pre>
+  <code>
+    const fetchPromise = fetch('https://api.ipbase.com/v1/json/');
+  </code>
+</pre>
+            <pre>
+  <code>
+    console.log(fetchPromise);
+  </code>
+</pre>
+            <pre>
+  <code>
+    fetchPromise.then( response => {
+      console.log(`Received response: ${response.status}`);
+    });
+  </code>
+</pre>
+          </section>
         </section>
         <section>
           <section data-background="backgrounds/Sprinkle.svg">
@@ -274,6 +315,26 @@
                 It is a useful concept in asynchronous requests because it
                 allows the developer to associate handlers to an object whose
                 value has not yet been determined.
+              </li>
+            </ul>
+          </section>
+          <section data-background="backgrounds/Sprinkle.svg">
+            <h3>Promise (Continued)</h3>
+            <ul>
+              <li>
+                It is the foundation for modern asynchronous programming in
+                Javascript.
+              </li>
+              <li>
+                At the time the promise is returned to the caller, the operation
+                often isn't finished, but the promise object provides methods to
+                handle the eventual success or failure of the operation.
+                <ul>
+                  <li>
+                    And more importantly, once the promise is returned, the rest
+                    of the code continues to execute.
+                  </li>
+                </ul>
               </li>
             </ul>
           </section>
